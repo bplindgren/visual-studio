@@ -54,7 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ConsoleApplication3\ConsoleApplication3\FizzBuzz.csproj">
+    <ProjectReference Include="..\..\FizzBuzz\FizzBuzz\FizzBuzz.csproj">
       <Project>{7e4fbb8a-4834-4a05-a878-fb3ef9e46225}</Project>
       <Name>FizzBuzz</Name>
     </ProjectReference>

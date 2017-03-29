@@ -10,21 +10,23 @@ namespace FizzBuzzApplication
     {
         public int startNumber;
         public int endNumber;
-        public static string three = "fizz";
+        public string result;
         public static string five = "buzz";
 
-        // no-arg constructor
+        // No-arg constructor
         public FizzBuzz()
         {
             this.startNumber = 0;
             this.endNumber = 0;
+            this.result = "";
         }
 
-        // constructor with start and end arguments
+        // Constructor with start and end arguments
         public FizzBuzz(int startNumber, int endNumber)
         {
             this.startNumber = startNumber;
             this.endNumber = endNumber;
+            this.result = "";
         }
 
         // Sets the start and end numbers
@@ -34,22 +36,36 @@ namespace FizzBuzzApplication
             this.endNumber = endNumber;
         }
 
-        public bool sayTrue()
+        // Generate the output string
+        public string getOutput()
         {
-            return true;
-        }
+            for (int i = this.startNumber; i <= this.endNumber; i++)
+            {
+                string s = "";
+                if ((i % 3) == 0)
+                {
+                    s += "fizz";
+                } if ((i % 5) == 0)
+                {
+                    s += "buzz";
+                }
 
-        public bool sayFalse()
-        {
-            return false;
+                if (String.IsNullOrWhiteSpace(s))
+                {
+                    s += (i.ToString() + " ");
+                } else 
+                {
+                    s += " ";
+                }
+                this.result += s;
+            }
+            return this.result.Substring(0, (this.result.Length - 1));
         }
-
 
         static void Main(string[] args)
         {
-
-
-
+            FizzBuzz fb = new FizzBuzz(1, 50);
+            Console.Write(fb.getOutput());
         }
     }
 }

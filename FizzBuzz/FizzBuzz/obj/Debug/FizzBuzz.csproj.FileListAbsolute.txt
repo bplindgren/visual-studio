@@ -4,3 +4,9 @@ C:\Users\Eileen\Documents\Visual Studio 2015\Projects\ConsoleApplication3\Consol
 C:\Users\Eileen\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\FizzBuzz.csprojResolveAssemblyReference.cache
 C:\Users\Eileen\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
 C:\Users\Eileen\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\bin\Debug\ConsoleApplication3.exe
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\obj\Debug\FizzBuzz.csprojResolveAssemblyReference.cache
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\obj\Debug\ConsoleApplication3.exe
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\FizzBuzz\FizzBuzz\obj\Debug\ConsoleApplication3.pdb
