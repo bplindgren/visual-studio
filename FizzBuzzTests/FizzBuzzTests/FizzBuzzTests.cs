@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApplication3;
+using FizzBuzzApplication;
 
 namespace FizzBuzzTests
 {
