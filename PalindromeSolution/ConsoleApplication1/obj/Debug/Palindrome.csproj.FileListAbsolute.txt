@@ -1,0 +1,6 @@
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\obj\Debug\Palindrome.csprojResolveAssemblyReference.cache
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Eileen\Documents\Visual Studio 2015\Projects\PalindromeSolution\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
