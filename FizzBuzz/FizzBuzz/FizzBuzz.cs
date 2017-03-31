@@ -41,7 +41,8 @@ namespace FizzBuzzApplication
                 // Build the output string accordingly
                 if ((i % 3) == 0) {
                     s += "fizz";
-                } if ((i % 5) == 0) {
+                }
+                if ((i % 5) == 0) {
                     s += "buzz";
                 }
 
