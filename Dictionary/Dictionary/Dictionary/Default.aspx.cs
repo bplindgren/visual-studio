@@ -25,18 +25,9 @@ namespace Dictionary {
             }
         }
 
-        public List<string> GetWords() {
-            return Words;
-        }
-
-        public List<string> GetLetterArray() {
-            List<string> letterArray = new List<string>();
-            foreach (string word in Words) {
-                if (word.StartsWith(ddlLetter.Text)) {
-                    letterArray.Add(word);
-                }
-            }
-            return letterArray;
+        public List<string> GetLetterWords(string letter) {
+            // Get a List of the words that start with the specified letter
+            return Words.Where((word) => word[0].ToString() == (letter)).ToList();
         }
 
         public string GenerateOutputString(List<string> words) {
@@ -92,20 +83,13 @@ namespace Dictionary {
 
                     // Get all words whose length == longLength
                     List<string> longestWords = letterWords2.Where((word) => word.Length == longLength).ToList();
-
-                    // Generate an output string
+                    
                     string longString = GenerateOutputString(longestWords);
 
                     Result.Text = "The ten longest words that start with '" + ddlLetter.Text + "' are: \n" + longString;
                     break;
             }
         }
-
-        public List<string> GetLetterWords(string letter) {
-            // Get a List of the words that start with the specified letter
-            return Words.Where((word) => word[0].ToString() == (letter)).ToList();
-        }
-
 
     }
 }
