@@ -1,0 +1,15 @@
+﻿.centering {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin-left: 37%;
+    width: 25%;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}

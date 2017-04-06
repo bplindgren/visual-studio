@@ -8,7 +8,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="form-group">
                 <label>Letter</label>
                 <asp:DropDownList ID="ddlLetter" CssClass="form-control" runat="server">
@@ -39,12 +39,8 @@
                     <asp:ListItem Value="y">"Y"</asp:ListItem>
                     <asp:ListItem Value="z">"Z"</asp:ListItem>
                 </asp:DropDownList>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <label>Query</label>
+            
+                <label class="padding-top-10">Query</label>
                 <asp:DropDownList ID="ddlQuery" CssClass="form-control" runat="server">
                     <asp:ListItem Value="begin">Number of Words that Begin with Letter</asp:ListItem>
                     <asp:ListItem Value="end">Number of Words that End with Letter</asp:ListItem>
@@ -54,12 +50,12 @@
                 </asp:DropDownList>
             </div>
 
-            <div class="btn">
-                <asp:Button ID="myButton" runat="server" Text="Get Result!" class="btn btn-primary" OnClick="myButton_Click" />
+            <div class="padding-bottom-10">
+                <asp:Button ID="myButton" runat="server" Text="Get Result" class="btn btn-primary centering" OnClick="myButton_Click" />
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="message">
                 <asp:Literal ID="Result" runat="server" />
             </div>
