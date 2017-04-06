@@ -49,7 +49,7 @@
                     <asp:ListItem Value="begin">Number of Words that Begin with Letter</asp:ListItem>
                     <asp:ListItem Value="end">Number of Words that End with Letter</asp:ListItem>
                     <asp:ListItem Value="avgNumChar">Average # of Characters in Words that Begin with Letter</asp:ListItem>
-                    <asp:ListItem Value="shorest">Shortest Words that begin with Letter</asp:ListItem>
+                    <asp:ListItem Value="shortest">Shortest Words that begin with Letter</asp:ListItem>
                     <asp:ListItem Value="longest">Longest Words that begin with Letter</asp:ListItem>
                 </asp:DropDownList>
             </div>

@@ -10,14 +10,13 @@
 namespace Dictionary
 {
     using System;
-    using System.Linq;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WordsDatabaseEntities : DbContext
+    public partial class WordsEntities : DbContext
     {
-        public WordsDatabaseEntities()
-            : base("name=WordsDatabaseEntities")
+        public WordsEntities()
+            : base("name=WordsEntities")
         {
         }
     
