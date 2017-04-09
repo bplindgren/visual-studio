@@ -36,15 +36,15 @@
             this.InternetAccess.Name = "InternetAccess";
             this.InternetAccess.Size = new System.Drawing.Size(97, 45);
             this.InternetAccess.TabIndex = 0;
-            this.InternetAccess.Text = "Internet Access";
+            this.InternetAccess.Text = "internet";
             this.InternetAccess.UseVisualStyleBackColor = true;
-            this.InternetAccess.Click += new System.EventHandler(this.InternetAccess_Click);
+            this.InternetAccess.Click += new System.EventHandler(this.Button_Click);
             // 
             // result
             // 
             this.result.Location = new System.Drawing.Point(246, 12);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(326, 20);
+            this.result.Size = new System.Drawing.Size(326, 120);
             this.result.TabIndex = 1;
             this.result.Text = "0";
             this.result.TextChanged += new System.EventHandler(this.result_TextChanged);
@@ -55,9 +55,9 @@
             this.NumFailures.Name = "NumFailures";
             this.NumFailures.Size = new System.Drawing.Size(97, 45);
             this.NumFailures.TabIndex = 2;
-            this.NumFailures.Text = "Number of Past Failures";
+            this.NumFailures.Text = "failures";
             this.NumFailures.UseVisualStyleBackColor = true;
-            this.NumFailures.Click += new System.EventHandler(this.NumFailures_Click);
+            this.NumFailures.Click += new System.EventHandler(this.Button_Click);
             // 
             // StudyTime
             // 
@@ -65,9 +65,9 @@
             this.StudyTime.Name = "StudyTime";
             this.StudyTime.Size = new System.Drawing.Size(97, 45);
             this.StudyTime.TabIndex = 3;
-            this.StudyTime.Text = "Study Time";
+            this.StudyTime.Text = "studytime";
             this.StudyTime.UseVisualStyleBackColor = true;
-            this.StudyTime.Click += new System.EventHandler(this.StudyTime_Click);
+            this.StudyTime.Click += new System.EventHandler(this.Button_Click);
             // 
             // Absences
             // 
@@ -75,9 +75,9 @@
             this.Absences.Name = "Absences";
             this.Absences.Size = new System.Drawing.Size(97, 45);
             this.Absences.TabIndex = 4;
-            this.Absences.Text = "Absences";
+            this.Absences.Text = "absences";
             this.Absences.UseVisualStyleBackColor = true;
-            this.Absences.Click += new System.EventHandler(this.Absences_Click);
+            this.Absences.Click += new System.EventHandler(this.Button_Click);
             // 
             // Form1
             // 
