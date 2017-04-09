@@ -23,89 +23,113 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.InternetAccess = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.result = new System.Windows.Forms.TextBox();
-            this.NumFailures = new System.Windows.Forms.Button();
-            this.StudyTime = new System.Windows.Forms.Button();
-            this.Absences = new System.Windows.Forms.Button();
+            this.criteria = new System.Windows.Forms.ComboBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // InternetAccess
-            // 
-            this.InternetAccess.Location = new System.Drawing.Point(12, 12);
-            this.InternetAccess.Name = "InternetAccess";
-            this.InternetAccess.Size = new System.Drawing.Size(97, 45);
-            this.InternetAccess.TabIndex = 0;
-            this.InternetAccess.Text = "internet";
-            this.InternetAccess.UseVisualStyleBackColor = true;
-            this.InternetAccess.Click += new System.EventHandler(this.Button_Click);
             // 
             // result
             // 
-            this.result.Location = new System.Drawing.Point(246, 12);
+            this.result.Location = new System.Drawing.Point(289, 12);
+            this.result.Multiline = true;
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(326, 120);
+            this.result.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.result.Size = new System.Drawing.Size(283, 203);
             this.result.TabIndex = 1;
             this.result.Text = "0";
             this.result.TextChanged += new System.EventHandler(this.result_TextChanged);
             // 
-            // NumFailures
+            // criteria
             // 
-            this.NumFailures.Location = new System.Drawing.Point(12, 74);
-            this.NumFailures.Name = "NumFailures";
-            this.NumFailures.Size = new System.Drawing.Size(97, 45);
-            this.NumFailures.TabIndex = 2;
-            this.NumFailures.Text = "failures";
-            this.NumFailures.UseVisualStyleBackColor = true;
-            this.NumFailures.Click += new System.EventHandler(this.Button_Click);
+            this.criteria.FormattingEnabled = true;
+            this.criteria.Items.AddRange(new object[] {
+            "school",
+            "sex",
+            "age",
+            "address",
+            "famsize",
+            "Pstatus",
+            "Medu",
+            "Fedu",
+            "Mjob",
+            "Fjob",
+            "reason",
+            "guardian",
+            "traveltime",
+            "studytime",
+            "failures",
+            "schoolsup",
+            "famsup",
+            "paid",
+            "activities",
+            "nursery",
+            "higher",
+            "internet",
+            "romantic",
+            "famrel",
+            "freetime",
+            "goout",
+            "Dalc",
+            "Walc",
+            "health",
+            "absences"});
+            this.criteria.Location = new System.Drawing.Point(12, 37);
+            this.criteria.MaxDropDownItems = 20;
+            this.criteria.Name = "criteria";
+            this.criteria.Size = new System.Drawing.Size(271, 21);
+            this.criteria.TabIndex = 6;
+            this.criteria.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Selected);
             // 
-            // StudyTime
+            // chart1
             // 
-            this.StudyTime.Location = new System.Drawing.Point(12, 138);
-            this.StudyTime.Name = "StudyTime";
-            this.StudyTime.Size = new System.Drawing.Size(97, 45);
-            this.StudyTime.TabIndex = 3;
-            this.StudyTime.Text = "studytime";
-            this.StudyTime.UseVisualStyleBackColor = true;
-            this.StudyTime.Click += new System.EventHandler(this.Button_Click);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Location = new System.Drawing.Point(12, 221);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(560, 283);
+            this.chart1.TabIndex = 7;
+            this.chart1.Text = "chart1";
             // 
-            // Absences
+            // textBox1
             // 
-            this.Absences.Location = new System.Drawing.Point(12, 204);
-            this.Absences.Name = "Absences";
-            this.Absences.Size = new System.Drawing.Size(97, 45);
-            this.Absences.TabIndex = 4;
-            this.Absences.Text = "absences";
-            this.Absences.UseVisualStyleBackColor = true;
-            this.Absences.Click += new System.EventHandler(this.Button_Click);
+            this.textBox1.Location = new System.Drawing.Point(13, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(270, 20);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Choose a Statistic";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 261);
-            this.Controls.Add(this.Absences);
-            this.Controls.Add(this.StudyTime);
-            this.Controls.Add(this.NumFailures);
+            this.ClientSize = new System.Drawing.Size(581, 513);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.criteria);
             this.Controls.Add(this.result);
-            this.Controls.Add(this.InternetAccess);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Student Grades";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button InternetAccess;
         private System.Windows.Forms.TextBox result;
-        private System.Windows.Forms.Button NumFailures;
-        private System.Windows.Forms.Button StudyTime;
-        private System.Windows.Forms.Button Absences;
+        private System.Windows.Forms.ComboBox criteria;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
