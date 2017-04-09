@@ -73,6 +73,7 @@ namespace StudentsApplication {
 
         private List<KeyValuePair<string, double>> GetSortedResults(List<KeyValuePair<string, double>> list) {
             int key;
+            // if the keys are numbers, they need to be converted to ints to be sorted properly
             if ((Int32.TryParse(list[0].Key, out key)) == true) {
                 // Change the string keys to int keys
                 List<KeyValuePair<int, double>> sorted = new List<KeyValuePair<int, double>>();
@@ -80,10 +81,11 @@ namespace StudentsApplication {
                 foreach (KeyValuePair<string, double> kvp in list) {
                     int keyInt;
                     Int32.TryParse(kvp.Key, out keyInt);
+                    // add key value pair that has a key with type int
                     sorted.Add(new KeyValuePair<int, double>(keyInt, kvp.Value));
-                    // sort by int keys
-                    sortedList2 = sorted.OrderBy(x => x.Key).ToList();
                 }
+                // sort by int keys
+                sortedList2 = sorted.OrderBy(x => x.Key).ToList();
 
                 // Change the keys back to strings
                 List<KeyValuePair<string, double>> sortedString = new List<KeyValuePair<string, double>>();
@@ -95,7 +97,6 @@ namespace StudentsApplication {
                 return list.OrderBy(o => o.Key).ToList();
             }
         }
-
 
         private string GenerateOutput(SortedDictionary<string, int> stats) {
             List<KeyValuePair<string, double>> results = new List<KeyValuePair<string, double>>();
@@ -112,20 +113,16 @@ namespace StudentsApplication {
             List<KeyValuePair<string, double>> sortedResults = GetSortedResults(results);
 
             string outputString = "";
-
-            foreach (KeyValuePair<string, double> kvp in sortedResults) {
+            foreach (KeyValuePair<string, double> kvp in sortedResults)
                 outputString += (kvp.Key + " => " + kvp.Value + "\r\n");  
-            }
 
             return outputString;
         }
 
         private void ComboBox_Selected(object sender, EventArgs e) {
             SortedDictionary<string, int> dictionary = new SortedDictionary<string, int>();
-
             ComboBox cb = (ComboBox)sender;
 
-            // Build a new dictionary with results for the button clicked
             dictionary = BuildDictionary(cb.Text);
 
             // Generate an output string
