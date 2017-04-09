@@ -65,19 +65,41 @@ namespace StudentsApplication {
         }
 
         private void InternetAccess_Click(object sender, EventArgs e) {
-            // Get the rows where students had the internet
-            EnumerableRowCollection yesRows = StudentData.AsEnumerable()
-                .Where(row => row.Field<string>("internet").Contains("yes"));
+            Dictionary<string, int> grades = new Dictionary<string, int>() {
+                { "yes", 0 },
+                { "yesStudents", 0 },
+                { "no", 0 },
+                { "noStudents", 0 }
+            };
+            
+            EnumerableRowCollection rows = StudentData.AsEnumerable();
+            foreach (DataRow student in rows) {
+                // Get the proper key
+                string key = student["internet"].ToString();
 
-            // Get the rows where students did not have the internet
-            EnumerableRowCollection noRows = StudentData.AsEnumerable()
-                .Where(row => row.Field<string>("internet").Contains("no"));
+                // Get the student's score and update it accordingly
+                int score;
+                Int32.TryParse(student["G3"].ToString(), out score);
+                grades[key] += score;
 
-            result.Text = "The average grade of students with internet access was " + CalculateAverageGrade(yesRows) + ".\n" + "The average grade of students without internet access was " + CalculateAverageGrade(noRows) + ".";
+                // Update the correct student count
+                grades[key + "Students"]++;
+            }
+
+            result.Text = "The average grade of students with internet access was " +  
+                Math.Round(((float)grades["yes"] / (float)grades["yesStudents"]),2) + ".\n" + 
+                " The average grade of students without internet access was " +
+                Math.Round(((float)grades["no"] / (float)grades["noStudents"]), 2) + ".";
         }
 
         private void NumFailures_Click(object sender, EventArgs e) {
-            result.Text = StudentData.Rows[3]["failures"].ToString();
+            EnumerableRowCollection rows = StudentData.AsEnumerable()
+                .Where(row => row.Field<string>("famsize").IsNormalized());
+            foreach (DataRow row in StudentData.AsEnumerable()) {
+                Console.WriteLine(row["failures"]);
+            }
+
+
         }
 
         private void StudyTime_Click(object sender, EventArgs e) {
